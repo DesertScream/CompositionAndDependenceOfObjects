@@ -20,18 +20,6 @@ public class MovieTest {
     private Movie ninth = new Movie(9, "Безумный Макс", "jpg", " action ", true);
     private Movie tenth = new Movie(10, "Поезд на Юму", "jpg", "western", false);
 
-    void setUp() {
-        manager.addFilm(first);
-        manager.addFilm(second);
-        manager.addFilm(third);
-        manager.addFilm(fourth);
-        manager.addFilm(fifth);
-        manager.addFilm(sixth);
-        manager.addFilm(seventh);
-        manager.addFilm(eighth);
-        manager.addFilm(ninth);
-        manager.addFilm(tenth);
-    }
 
     @Test
     public void shouldFindLastOver() {
