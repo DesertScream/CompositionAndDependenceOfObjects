@@ -20,6 +20,27 @@ public class MovieTest {
     private Movie ninth = new Movie(9, "Безумный Макс", "jpg", " action ", true);
     private Movie tenth = new Movie(10, "Поезд на Юму", "jpg", "western", false);
 
+    @Test
+    public void shouldFindLastOver11() {
+        MovieManager manager = new MovieManager();
+        manager.addFilm(first);
+        manager.addFilm(second);
+        manager.addFilm(third);
+        manager.addFilm(fourth);
+        manager.addFilm(fifth);
+        manager.addFilm(sixth);
+        manager.addFilm(seventh);
+        manager.addFilm(eighth);
+        manager.addFilm(ninth);
+        manager.addFilm(tenth);
+
+
+        Movie[] expected = new Movie[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+        Movie[] actual = manager.showAll();
+
+        assertArrayEquals(expected, actual);
+
+    }
 
     @Test
     public void shouldFindLastOver() {

@@ -7,6 +7,7 @@ public class MovieManager {
     private int filmsNumber;
 
 
+
     public void addFilm(Movie film) {
         Movie[] collection = new Movie[films.length + 1];
         System.arraycopy(films, 0, collection, 0, films.length);
